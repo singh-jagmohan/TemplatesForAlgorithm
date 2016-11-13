@@ -1,3 +1,7 @@
+## Already added extra files
+__init__.py
+.gitignore
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
