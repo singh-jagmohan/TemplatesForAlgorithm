@@ -1,3 +1,4 @@
+# generate the value table for all items
 def knapsack(weights,values,maximum_weight):
     heightOfTable = len(values)
     weightTable = [[0 for x in xrange(maximum_weight+1)] for y in xrange(heightOfTable)]
@@ -12,11 +13,37 @@ def knapsack(weights,values,maximum_weight):
 
     return weightTable
 
+
+# return the exact items with which we get the maximum value
 def traceElementsOfWeights(weights,weightTable,maximum_weight):
     heightOfTable = len(weights)
-    for row in xrange(heightOfTable,0,-1):
-        if
+    steps = []
+    for row in xrange(heightOfTable-1,-1,-1):
+        if row == 0:
+            if weightTable[row][maximum_weight]==0:
+                pass
+            else:
+                steps = [weights[row]] + steps
+        else:
+            if weightTable[row][maximum_weight]==weightTable[row-1][maximum_weight]:
+                pass
+            else:
+                steps = [weights[row]]+steps
+                maximum_weight -= weights[row]
+    return steps
 
 
 
-knapsack([1,3,4,5],[1,4,5,7],7)
+
+weights = [3,1,4,5]
+values = [4,1,5,7]
+maximum_weight = 7
+
+
+###table has the value for all intermediate weights and maximum values which can be acheived
+table = knapsack(weights,values,maximum_weight)
+print table[len(weights)-1][maximum_weight]
+# for index, i in enumerate(table):
+#     print i
+
+print traceElementsOfWeights(weights,table,maximum_weight)
