@@ -49,8 +49,14 @@ def create_edit_characters(original_string,final_string):
 
     print character_table
 
-original_string = 'aunday'
-final_string = 'saturday'
-number_of_edit = create_edit_table(original_string,final_string)
-print number_of_edit
-create_edit_characters(original_string,final_string)
+
+
+
+if __name__ == '__main__':
+    original_string = 'aunday'
+    final_string = 'saturday'
+    number_of_edit = create_edit_table(original_string, final_string)
+    print number_of_edit
+    create_edit_characters(original_string, final_string)
+
+
