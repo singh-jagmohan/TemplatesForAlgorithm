@@ -46,17 +46,27 @@ def create_edit_characters(original_string,final_string):
             character_index_at_final -=1
             character_index_at_original -=1
             # if final_string[character_index_at_final-1]==original_string[character_index_at_original-1]:
+    if character_index_at_original>0:
+        character_table.append([original_string[character_index_at_original-1],'DELETE'])
+        character_index_at_original -=1
 
-    print character_table
+    return character_table
+
+
 
 
 
 
 if __name__ == '__main__':
-    original_string = 'aunday'
-    final_string = 'saturday'
+    original_string = 'random'
+    final_string = 'radim'
     number_of_edit = create_edit_table(original_string, final_string)
     print number_of_edit
-    create_edit_characters(original_string, final_string)
+    # extra data for more complicated problem
+    for x in edit_table:
+        print x
+    steps = create_edit_characters(original_string, final_string)
+    for x in steps[::-1]:
+        print x
 
 
