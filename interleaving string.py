@@ -39,13 +39,17 @@ if __name__=='__main__':
     stringB = 'axy'
     interleavingString1 = 'abaaxy'
     interleavingString2 = 'aaxaby'
-
-    if isInterleaving(stringA,stringB,interleavingString1):
-        print "YES"
+    if len(stringA)+len(stringB)==len(interleavingString1):
+        if isInterleaving(stringA,stringB,interleavingString1):
+            print "YES"
+        else:
+            print "NO"
     else:
         print "NO"
-
-    if isInterleaving(stringA, stringB, interleavingString2):
-        print "YES"
+    if len(stringA) + len(stringB) == len(interleavingString2):
+        if isInterleaving(stringA, stringB, interleavingString2):
+            print "YES"
+        else:
+            print "NO"
     else:
         print "NO"
