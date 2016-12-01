@@ -40,10 +40,14 @@ values = [4,1,5,7]
 maximum_weight = 7
 
 
-###table has the value for all intermediate weights and maximum values which can be acheived
-table = knapsack(weights,values,maximum_weight)
-print table[len(weights)-1][maximum_weight]
-# for index, i in enumerate(table):
-#     print i
+if __name__=='__main__':
 
-print traceElementsOfWeights(weights,table,maximum_weight)
+    ###table has the value for all intermediate weights and maximum values which can be acheived
+    table = knapsack(weights,values,maximum_weight)
+    # for x in table:
+    #     print x
+    print table[len(weights)-1][maximum_weight]
+    # for index, i in enumerate(table):
+    #     print i
+
+    print traceElementsOfWeights(weights,table,maximum_weight)
