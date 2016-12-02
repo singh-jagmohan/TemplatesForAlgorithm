@@ -40,8 +40,11 @@ def backtrackForFirst(N):
             second_status = False
         else:
             next_row -=1
-            lastPosition = positions.pop()
-            next_column = lastPosition[1]+1
+            if len(positions)>=1:
+                lastPosition = positions.pop()
+                next_column = lastPosition[1]+1
+            else:
+                break
     return positions
 
 
@@ -100,6 +103,6 @@ def backtrackAll(N):
         positions.pop()
     return positions
 
-print backtrackForFirst(5)
-print backtrackAll(5)
+print backtrackForFirst(4)
+#print backtrackAll(4)
 
