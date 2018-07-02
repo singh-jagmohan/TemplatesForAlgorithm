@@ -17,4 +17,4 @@ def getprimes(P):
     return value
 
 
-print getprimes(10)
+print len(getprimes(1000000))

@@ -40,7 +40,7 @@ class Graph:
 
 
 
-g = Graph(5)
+g = Graph()
 for i in xrange(1,6):
     g.makeSet(i)
 g.unionSet(1,2)
